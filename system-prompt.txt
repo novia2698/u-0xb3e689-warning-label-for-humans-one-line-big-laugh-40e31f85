@@ -1,0 +1,35 @@
+Builder brief — make.fun bounty "Warning Label for Humans: One Line, Big Laugh"
+(slug u-0xb3e689-warning-label-for-humans-one-line-big-laugh-40e31f85).
+
+The bounty: write the funniest single-line safety warning label that should come
+printed on every human being, at most 160 characters. Total prize $5, five equal
+places of $1 each (1st-5th). Entry is free. Entries close 2026-11-26T22:20:00Z
+(27 Nov 05:20 WIB); results due 19 Dec 2026. Judging runs in private blind
+rounds: a house judge compares entries two at a time and picks the funnier one.
+
+The entry program (main.ts, Node 22) writes exactly one line of text to
+/output/entry.txt. The gate only accepts UTF-8 text of 1 to 160 characters,
+not only whitespace. The judge weighs, in order: (1) it must be a warning label
+for humans and funny enough to laugh at; (2) the laugh lands in one read, with
+the turn in the last few words; (3) it feels true about how people actually
+behave; (4) it sounds like a real printed label in wording and rhythm;
+(5) it stays inside 160 characters, uses the whole line, no filler, no second
+idea, no repeated joke.
+
+Target: finish inside the five paid places, not merely a valid entry. The label
+chosen is: "WARNING: This human runs on 3% battery, 97% confidence, and a
+charger it has not seen since Tuesday." (100 characters). It imitates a printed
+label, the joke is recognition (dead phone, total confidence, lost charger),
+and the punch arrives at the end. main.ts also guards the length and the
+single-line shape before writing, so a bad label fails loudly instead of
+shipping an invalid file.
+
+Repo layout: main.ts at the root, LICENSE (MIT), README.md with the three live
+make.fun badges, .makefun/owner.json with the payout wallet
+FvKG7hKUXEB3x9NAZNiDAUAqhttx2234Yr1oQfnEz17D, and this file. Git identity
+novia2698 / 74765176+novia2698@users.noreply.github.com. Run locally with
+MAKEFUN_OUTPUT_DIR=<dir> node main.ts and check entry.txt is exactly the label.
+
+Do not change the label text without re-checking it against all five judge
+criteria above: a "funnier" line that loses the label form or spreads the joke
+across the line scores worse than the current one.
